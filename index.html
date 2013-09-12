@@ -1,0 +1,42 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/html">
+    <head>
+        <title>HHCalendar - тестовое задание - Павел Паршин</title>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+        <script type="text/javascript" src="js/calendar.js"></script>
+        <script type="text/javascript" src="js/base.js"></script>
+    </head>
+
+    <body>
+        <header id="header">
+            <div id="header-content" class="clearfix">
+                <div id="ui-controls" class="L">
+                    <div id="add-button" class="ui-button">Добавить</div>
+                    <div id="update-button" class="ui-button">Обновить</div>
+                    <div id="ui-quick-add-event">
+                        <div id='ui-close-form-qevent' class="ui-close-form"></div>
+                        <div id="ui-quick-add-event-date"></div>
+                        <input id="ui-quick-add-event-input" class="ui-textinput" type="text" placeholder="Событие">
+                        <input id='ui-quick-add-event-submit' type='submit' value='Создать' class='ui-form-submit'>
+                    </div>
+                </div>
+                <div id="ui-search" class="R">
+                    <input id="ui-search-input" class="ui-textinput" name="search" type="text" placeholder="Событие, дата или участник">
+                    <div id="ui-suggest"></div>
+                </div>
+            </div>
+        </header>
+
+        <article id="wrapper">
+            <div id="ui-navigation" class="clearfix">
+                <div id="ui-button-prev" class="L"></div>
+                <div id="date-label" class="L"></div>
+                <div id="ui-button-next" class="L"></div>
+                <div id="ui-button-today" class="L"></div>
+            </div>
+            <div id="calendar"></div>
+        </article>
+    </body>
+</html>

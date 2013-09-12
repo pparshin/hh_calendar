@@ -1,0 +1,386 @@
+/**
+ * Разметка страницы
+ */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font: 12px Arial, Helvetica, sans-serif;
+}
+
+#header {
+    width: 100%;
+    height: 45px;
+    background-color: #f4f4f4;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+    padding-top: 55px;
+}
+
+#header-content {
+    width: 900px;
+    height: 25px;
+    margin: 0 auto 0;
+}
+
+#header-content #ui-controls {
+    position: relative;
+}
+
+#header-content #ui-controls .ui-button {
+    margin-right: 7px;
+    display: inline-block;
+}
+
+#wrapper {
+    width: 900px;
+    height: 635px;
+    margin: 0 auto;
+}
+
+#ui-navigation {
+    height: 30px;
+    padding-top: 15px;
+}
+
+#calendar-table {
+    width: 100%;
+    height: 590px;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-size: 11px;
+}
+
+#calendar-table td {
+    border: 1px solid #ebebeb;
+    width: 107px;
+    height: 97px;
+    vertical-align: top;
+    overflow: hidden;
+    background-color: #FFFFFF;
+    padding: 10px;
+}
+
+#calendar-table td.calendar-current-day { background-color: #EEEEEE; }
+
+#calendar-table td:hover {
+    background-color: #c2e4fe;
+}
+
+#calendar-table td.selected { padding: 0; }
+
+#date-label {
+    margin: -1px 8px 0 8px;
+    font-size: 16px;
+}
+
+/**
+ * Элементы интерфейса
+ */
+.ui-button {
+    width: 80px;
+    height: 20px;
+    background-color: #0271c7;
+    color: #ffffff;
+    text-align: center;
+    padding-top: 5px;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.ui-textinput {
+    height: 18px;
+    border-radius: 2px;
+    border: 1px solid #ebebeb;
+    padding: 5px 9px 2px 9px;
+    color: #8f8f8f;
+    font: 12px Arial, Helvetica, sans-serif;
+    box-shadow: inset 1px 1px 2px 0 rgba(0, 0, 0, 0.4);
+}
+
+.ui-form-submit {
+    height: 20px;
+    border: 1px solid #a6a6a6;
+    border-radius: 4px;
+    background: linear-gradient(to bottom,  #ffffff 0%,#ececec 100%);
+    cursor: pointer;
+    font: 11px Arial;
+}
+
+#ui-search {
+    background: url("../img/search_bg.jpg") 0 7px no-repeat;
+    padding-left: 20px;
+    text-align: right;
+    position: relative;
+}
+
+#ui-search-input {
+    width: 180px;
+}
+
+#ui-button-prev, #ui-button-next {
+    width: 17px;
+    height: 17px;
+    cursor: pointer;
+}
+
+#ui-button-prev {
+    background: url("../img/prev.png") no-repeat;
+}
+
+#ui-button-next {
+    background: url("../img/next.png") no-repeat;
+}
+
+#ui-button-today {
+    background: url("../img/today.png") no-repeat;
+    width: 57px;
+    height: 17px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+#ui-bubble {
+    width: 256px;
+    min-height: 256px;
+    border: 1px solid #ebebeb;
+    padding: 22px 25px 22px 22px;
+    position: absolute;
+    visibility: hidden;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: #FFFFFF;
+    box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.3);
+}
+
+#ui-description-add {
+    resize: none;
+    border-radius: 2px;
+    border: 1px solid #ebebeb;
+    padding: 9px;
+    color: #8f8f8f;
+    font: 12px Arial, Helvetica, sans-serif;
+    box-shadow: inset 1px 1px 2px 0 rgba(0, 0, 0, 0.4);
+    width: 238px;
+    height: 96px;
+    margin-top: 37px;
+}
+
+#ui-event-add, #ui-participant-add {
+    width: 238px;
+    margin-bottom: 5px;
+}
+
+#ui-event-add {
+    font-size: 14px;
+}
+
+#ui-bubble .ui-form-submit {
+    margin: 20px 12px 0 0;
+}
+
+#ui-bubble #ui-bubble-date {
+    padding: 0 0 5px 10px;
+}
+
+#ui-bubble:after,
+#ui-bubble:before {
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid #FFFFFF;
+    border-top: 10px solid transparent;
+    top: 22px;
+    content: '';
+    left: -10px;
+    position: absolute;
+}
+
+#ui-bubble:before {
+    border-bottom: 11px solid transparent;
+    border-right: 11px solid #cbcbcb;
+    border-top: 11px solid transparent;
+    top: 21px;
+    left: -11px;
+}
+
+.ui-close-form {
+    background: url("../img/close_form.jpg") no-repeat;
+    position: absolute;
+    top: 11px;
+    right: 11px;
+    width: 7px;
+    height: 7px;
+    cursor: pointer;
+}
+
+#ui-suggest {
+    position: absolute;
+    width: 215px;
+    background-color: #FFFFFF;
+    box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.3);
+    top: 42px;
+    left: 22px;
+    visibility: hidden;
+    z-index: 2;
+    text-align: left;
+    padding: 4px 0 15px 0;
+}
+
+#ui-suggest .suggest-item {
+    width: 174px;
+    margin-left: 4px;
+    padding: 8px 7px;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+}
+
+#ui-suggest:after,
+#ui-suggest:before,
+#ui-quick-add-event:after,
+#ui-quick-add-event:before {
+    border-left: 10px solid transparent;
+    border-bottom: 10px solid #FFFFFF;
+    border-right: 10px solid transparent;
+    top: -10px;
+    content: '';
+    left: 20px;
+    position: absolute;
+}
+
+#ui-suggest:before,
+#ui-quick-add-event:before {
+    border-left: 11px solid transparent;
+    border-bottom: 11px solid #cbcbcb;
+    border-right: 11px solid transparent;
+    top: -11px;
+    left: 19px;
+}
+
+#ui-suggest .suggest-separator {
+    margin: 3px 0 3px 8px;
+    height: 1px;
+    width: 182px;
+    background-color: #ebebeb;
+}
+
+#ui-suggest .suggest-item .suggest-item-title {
+    color: #000000;
+    font-weight: bold;
+    height: 15px;
+}
+
+#ui-suggest .suggest-item .suggest-item-date {
+    color: #666666;
+    font-size: 11px;
+    margin-top: 5px;
+}
+
+#ui-suggest-scroll {
+    position: absolute;
+    width: 7px;
+    height: 24px;
+    top: 10px;
+    right: 7px;
+    background-color: #7a7a7a;
+    border-radius: 4px;
+    z-index: 3;
+}
+
+#ui-suggest .suggest-item .white-gradient {
+    background: -ms-linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* IE10+ */
+    background: linear-gradient(to right,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* W3C */
+    position: absolute;
+    z-index: 3;
+    width: 50px;
+    height: 100%;
+    right: 0;
+    top: 0;
+}
+
+#ui-suggest .suggest-item:hover {
+    background-color: #27a1ff;
+    cursor: pointer;
+}
+
+#ui-suggest .suggest-item:hover .suggest-item-title, #ui-suggest .suggest-item:hover .suggest-item-date {
+    color: #FFFFFF;
+}
+
+#ui-suggest .suggest-item:hover .white-gradient {
+    background: transparent;
+}
+
+#ui-quick-add-event {
+    position: absolute;
+    width: 300px;
+    height: 100px;
+    background-color: #FFFFFF;
+    box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.3);
+    top: 42px;
+    left: 1px;
+    visibility: hidden;
+    z-index: 2;
+}
+
+#ui-quick-add-event-input {
+    width: 235px;
+    margin: 24px 0 11px 20px;
+}
+
+#ui-quick-add-event-submit {
+    margin-left: 20px;
+}
+
+/**
+ * Вспомогательные классы и стили
+ */
+.L { float: left; }
+.R { float: right; }
+
+.clearfix:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+    font-size: 0;
+}
+
+.calendar-day-caption { color: #999999; }
+
+td.calendar-current-day .calendar-day-caption { font-weight: bold; }
+
+.selected #selected-wrapper {
+    background-color: rgba(194, 228, 254, 0.5);
+    border: 2px solid #83C8FF;
+    height: 97px;
+    padding: 8px;
+}
+
+.clicked {
+    background-color: #015da4;
+    color: #b9c8dc;
+    box-shadow: 0 2px 1px rgba(0, 0, 0, 0.4) inset;
+}
+
+/**
+ * События
+ */
+.calendar-event p {
+    margin: 0 0 5px 0;
+    color: #666666;
+}
+
+.calendar-event p.event-title {
+    font-weight: bold;
+    margin-top: 7px;
+}
+
+.calendar-cell-with-event {
+    background-color: #c2e4fe;
+}
+
+textarea { overflow: auto; }
